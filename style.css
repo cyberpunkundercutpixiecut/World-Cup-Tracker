@@ -832,7 +832,6 @@ footer p {
   background: #444;
 }
 
-/* Back to full bracket button */
 .back-full-bracket {
   background: #222;
   color: #fff;
@@ -848,7 +847,7 @@ footer p {
 }
 
 /* ============================================================
-   BRACKET LAYOUT (FIXED WIDTH REMOVED)
+   BRACKET LAYOUT
 ============================================================ */
 
 .bracket-chart {
@@ -894,7 +893,7 @@ footer p {
 }
 
 /* ============================================================
-   ROUND DETAILS PANEL (RIGHT SIDE)
+   ROUND DETAILS PANEL
 ============================================================ */
 
 .round-details {
@@ -1079,7 +1078,6 @@ h4 {
   text-transform: uppercase;
 }
 
-/* Text flow */
 .group-block.summary-block div {
   display: inline;
   margin-right: 10px;
@@ -1153,8 +1151,7 @@ h4 {
     text-align: center;
   }
 
-  /* Group tables */
-  .group-container {
+ .group-container {
     width: 100%;
     margin: 10px 0;
   }
@@ -1171,7 +1168,6 @@ h4 {
     text-align: center;
   }
 
-  /* Match rows */
   .match-row {
     display: flex;
     flex-direction: column;
@@ -1193,7 +1189,6 @@ h4 {
     text-align: center;
   }
 
-  /* Knockout bracket */
   .knockout-round {
     width: 100%;
     margin: 15px 0;
