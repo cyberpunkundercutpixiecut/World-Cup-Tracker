@@ -1,0 +1,1290 @@
+/* ===========================
+   GLOBAL
+=========================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+}
+
+header {
+  background: #222;
+  padding: 15px;
+  border-bottom: 2px solid #444;
+}
+
+.header-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input,
+select {
+  background: #000;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 4px 6px;
+}
+
+.match-row input[type="number"] {
+  width: 40px;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+button {
+  background: #444;
+  color: #eee;
+  border: 1px solid #666;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.group-block > button {
+  display: block;
+  margin-top: 5px;  
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background: #666;
+}
+
+main {
+  padding: 20px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+section {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 15px;
+}
+
+.section-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===========================
+   TEAMS PANEL
+=========================== */
+.group-block {
+  border: 1px solid #555;
+  padding: 8px;
+  margin-bottom: 12px;
+  background: #181818;
+}
+
+.group-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #0af;
+}
+
+.team-row input {
+  width: 200px;
+  background: #000;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 4px;
+}
+
+.team-row.readonly span {
+  display: block;
+  padding: 4px 0;
+  color: #ddd;
+}
+
+/* ===========================
+   SEASON TABS
+=========================== */
+#finishedSeasonTabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.season-tab {
+  background: #333;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.season-tab.active {
+  background: #0a7;
+  border-color: #0c9;
+}
+
+.season-tab:nth-child(2) {
+ 
+}
+
+/* ===========================
+   ROUND TITLE
+=========================== */
+.round-title {
+  margin: 5px 0 10px 0;
+  font-size: 16px;
+  color: #0af;
+}
+
+/* ===========================
+   MATCH ROW BASE
+=========================== */
+.match-row {
+  margin: 6px 0;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   UNIVERSAL SCORE BOX + LINE
+=========================== */
+.score-box,
+.score-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 70px;
+}
+
+.score-num {
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+}
+
+.score-line {
+  width: 8px;
+  height: 2px;
+  background: linear-gradient(to right, #0af, #0ff);
+  border-radius: 2px;
+  filter: drop-shadow(0 0 4px #0af);
+  display: inline-block;
+  margin: 0 2px;
+  align-self: center;
+}
+
+/* ===========================
+   GROUP STAGE HEADER
+=========================== */
+.match-row.s1.match-header {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 1.6fr;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #0af;
+  background: #181818;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   GROUP STAGE MATCH ROW
+=========================== */
+.match-row.s1.centered-row {
+  display: grid;
+  grid-template-columns: 1.6fr auto 1.6fr;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.team-home,
+.team-away {
+  font-size: 13px;
+  color: #eee;
+  text-align: center;
+}
+
+/* ===========================
+   GROUP TABLES
+=========================== */
+.group-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: center;
+  background: #111;
+}
+
+.group-table th {
+  border: 1px solid #333;
+  padding: 6px 8px;
+  color: #0af;
+  background: #181818;
+  font-weight: bold;
+}
+
+.group-table td {
+  border: 1px solid #333;
+  padding: 6px 8px;
+  color: #ddd;
+}
+
+.group-table.mini {
+  margin-bottom: 12px;
+  background: #151515;
+}
+
+.group-table.total {
+  margin-top: 15px;
+  background: #181818;
+}
+
+/* ===========================
+   GROUP BOX
+=========================== */
+.group-box {
+  margin-top: 15px;
+  padding: 10px;
+  background: #181818;
+  border: 1px solid #444;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   GROUP HEADER
+=========================== */
+.group-header {
+  font-weight: bold;
+  color: #0af;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 2px;
+}
+
+/* ===========================
+   TEAM DROPDOWN
+=========================== */
+.team-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #000;
+  padding: 3px 6px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.team-dropdown:hover {
+  background: #111;
+}
+
+.team-name {
+  color: #eee;
+  font-size: 13px;
+}
+
+.epic-slash {
+  width: 14px;
+  height: 14px;
+}
+
+.epic-slash line {
+  stroke: #0af;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 4px #0af);
+}
+
+.team-menu {
+  display: none;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  background: #222;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  border-radius: 4px;
+  z-index: 20;
+  min-width: 160px;
+}
+
+.team-dropdown.open .team-menu {
+  display: block;
+}
+
+.team-menu div {
+  padding: 2px 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* ===========================
+   KNOCKOUT (ROUND16 → FINAL)
+=========================== */
+.match-row.s2plus {
+  display: grid;
+  grid-template-columns:
+    1.6fr
+    1fr
+    1.6fr
+    0.6fr
+    0.6fr
+    0.6fr
+    0.6fr;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 4px 8px;    
+}
+
+.match-row.s2plus.match-header {
+  font-weight: bold;
+  color: #0af;
+  background: #181818;
+  border: 1px solid #333;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns:
+    1.6fr 1fr 1.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  text-align: center;
+}
+
+.match-row.s2plus.readonly span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-row.s2plus .score-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ensure separator line is visible in knockout too (keep global style intact) */
+.match-row.s2plus .score-separator .score-line {
+  display: inline-block;
+}
+
+/* knockout team dropdown inside grid cell */
+.match-row.s2plus .team-dropdown {
+  justify-content: center;
+}
+
+/* ===========================
+   PANELS
+=========================== */
+.groupstage-panel,
+.knockout-panel,
+.final-panel {
+  margin-top: 10px;
+}
+
+/* ===========================
+   KNOCKOUT SUMMARY
+=========================== */
+.knockout-summary {
+  margin-top: 15px;
+  padding: 10px;
+  background: #181818;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.knockout-summary h3 {
+  margin: 0 0 8px 0;
+  color: #0af;
+  font-size: 15px;
+}
+
+.summary-block h4 {
+  margin: 6px 0 2px 0;
+  color: #0af;
+  font-size: 13px;
+}
+
+.summary-block div {
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* ===========================
+   CHAMPION LABEL
+=========================== */
+.champion-label {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.champion-title {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  color: #0af;
+  margin-bottom: 4px;
+}
+
+.champion-name {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ===========================
+   QUALIFICATION BOXES
+=========================== */
+.qual-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.qual-box {
+  border: 1px solid #555;
+  padding: 8px;
+  background: #181818;
+}
+
+.qual-box h4 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #0af;
+}
+
+.champion-block {
+  margin-top: 15px;
+  border-top: 1px solid #00aaff;
+  padding-top: 10px;
+}
+
+.champion-title {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.champion-name {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px 40px 20px 20px;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 1px solid #333;
+  text-align: left;
+}
+
+footer p {
+  margin: 0;
+  padding-right: 40px;
+  max-width: 95%;
+}
+
+/* ===========================
+   Knockout Editable Layout
+=========================== */
+.match-row.s2plus input[type="number"],
+.match-row.s2plus input[type="text"] {
+  width: 55px;
+  max-width: 60px;
+  background: #000;
+  color: #eee;        
+  border: 1px solid #333;
+  text-align: center;
+  padding: 3px 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.knockout-panel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.knockout-panel .team-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.standings-title {
+  font-weight: bold;
+  color: #0af;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   Knockout Score Column
+=========================== */
+.match-row.s2plus {
+  display: grid;
+  grid-template-columns:
+    1.6fr        
+    1.2fr       
+    1.6fr     
+    0.6fr 0.6fr 0.6fr 0.6fr;
+  align-items: center;
+  gap: 8px;      
+  text-align: center;
+  padding: 4px 8px;
+}
+
+.match-row.s2plus .score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 90px;
+  overflow: visible;
+}
+
+.match-row.s2plus input[type="number"] {
+  width: 45px;    /* narrower so both fit neatly */
+  max-width: 50px;
+  background: #000;
+  color: #eee;
+  border: 1px solid #333;
+  text-align: center;
+  padding: 3px 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.match-row.s2plus .score-line {
+
+  background: linear-gradient(to right, #0af, #0ff);
+  border-radius: 2px;
+  filter: drop-shadow(0 0 4px #0af);
+  display: inline-block;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   DRAWING OF LOTS UI (FINAL, CLEAN, NO UPLOAD)
+============================================================ */
+
+.drawing-lots-box {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #2a2a2a;
+  background: #111;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 14px;
+}
+
+/* Cyan blue highlight */
+.drawing-lots-box strong {
+  color: #4ec9ff;
+}
+
+/* Buttons: Draw + Download */
+.btn-draw-lots,
+.btn-download-draw {
+  padding: 6px 12px;
+  background: #1e1e1e;
+  border: 1px solid #4ec9ff;
+  color: #4ec9ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.15s;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.btn-draw-lots:hover,
+.btn-download-draw:hover {
+  background: #4ec9ff;
+  color: #000;
+}
+/* REMOVE the box look completely */
+.drawing-lots-result {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* REMOVE the box look completely */
+.drawing-lots-result {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Title = cyan blue */
+.drawing-lots-result .title {
+  color: #4ec9ff;   /* cyan blue */
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 0 4px 0;
+}
+
+/* Group + Winner = white */
+.drawing-lots-result .group {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+/* ============================================================
+   MINIMALIST BRACKET LAYOUT (FINAL CLEAN VERSION)
+============================================================ */
+
+.bracket-chart {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 20px;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.bracket-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: max-content;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 180px;
+  box-sizing: border-box;
+}
+
+.round h3 {
+  text-align: center;
+  color: #00bcd4;
+  font-size: 14px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 4px;
+}
+
+/* ============================================================
+   GROUP BLOCKS
+============================================================ */
+
+.bracket-chart .group-block {
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  width: 180px;
+  box-sizing: border-box;
+}
+
+.bracket-chart .group-block h4 {
+  color: #00bcd4;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* ============================================================
+   MATCH BOXES
+============================================================ */
+
+.match-box {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.team-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.team-line strong {
+  color: #00bcd4;
+}
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+
+.bracket-chart::-webkit-scrollbar,
+.bracket-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bracket-chart::-webkit-scrollbar-thumb,
+.bracket-grid::-webkit-scrollbar-thumb {
+  background: #00bcd4;
+  border-radius: 3px;
+}
+
+.bracket-chart::-webkit-scrollbar-track,
+.bracket-grid::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* ============================================================
+   BRACKET OVERLAY MODE (FIXED SIZE + INTERNAL SCROLLBARS)
+============================================================ */
+
+.bracket-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* FIXED BOX — scrollbars appear INSIDE this box */
+.bracket-overlay-content {
+  position: relative;
+  width: 90vw;
+  max-width: 1600px;
+  height: 80vh;
+  max-height: 900px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* Minimalist scrollbars */
+.bracket-overlay-content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.bracket-overlay-content::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+.bracket-overlay-content::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Close button */
+.bracket-close-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10000;
+}
+
+.bracket-close-btn:hover {
+  background: #444;
+}
+
+/* Back to full bracket button */
+.back-full-bracket {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.back-full-bracket:hover {
+  background: #333;
+}
+
+/* ============================================================
+   BRACKET LAYOUT (FIXED WIDTH REMOVED)
+============================================================ */
+
+.bracket-chart {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bracket-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 100%;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 180px;
+  box-sizing: border-box;
+}
+
+.round h3,
+.round-header {
+  text-align: center;
+  color: #00bcd4;
+  font-size: 14px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+.round-header:hover {
+  color: #33ddee;
+}
+
+/* ============================================================
+   ROUND DETAILS PANEL (RIGHT SIDE)
+============================================================ */
+
+.round-details {
+  color: #f5f5f5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  white-space: normal;
+}
+
+.round-details h4 {
+  color: #00bcd4;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 10px 0 6px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   GROUP STANDINGS TABLE
+============================================================ */
+
+.group-standings {
+  margin-bottom: 20px;
+}
+
+.group-standings h4 {
+  color: #00bcd4;
+  margin-bottom: 6px;
+}
+
+.group-standings table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.group-standings table th,
+.group-standings table td {
+  border: 1px solid #333;
+  padding: 4px;
+  text-align: center;
+}
+
+.drawing-lots {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* ============================================================
+   MATCH REPORTS (KNOCKOUT)
+============================================================ */
+
+.match-report {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.match-report h4 {
+  color: #00bcd4;
+  margin-bottom: 6px;
+}
+
+.match-report p {
+  font-size: 12px;
+  color: #ccc;
+  margin: 2px 0;
+}
+
+/* ============================================================
+   BRACKET SUMMARY PARAGRAPH STYLE
+============================================================ */
+
+.group-block.summary-block {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.group-block.summary-block h4 {
+  color: #00bcd4;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* Make items flow horizontally like a paragraph */
+.group-block.summary-block div {
+  display: inline;
+  margin-right: 12px;
+  color: #f5f5f5;
+  font-size: 1.05rem;
+}
+
+.group-block.summary-block div::after {
+  content: ",";
+}
+
+.group-block.summary-block div:last-child::after {
+  content: "";
+}
+
+/* ============================================================
+   BRACKET SUMMARY PARAGRAPH STYLE
+============================================================ */
+
+.group-block.summary-block {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.group-block.summary-block h4 {
+  color: #00bcd4;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* Make items flow horizontally like a paragraph */
+.group-block.summary-block div {
+  display: inline;
+  margin-right: 12px;
+  color: #f5f5f5;
+  font-size: 1.05rem;
+}
+
+.group-block.summary-block div::after {
+  content: ",";
+}
+
+.group-block.summary-block div:last-child::after {
+  content: "";
+}
+
+/* ============================================================
+   GLOBAL H4 SPACING OVERRIDE
+============================================================ */
+h4 {
+  margin-block-start: 0.4em;  /* reduce top spacing */
+  margin-block-end: 0.4em;    /* reduce bottom spacing */
+  font-weight: 700;
+  color: #00bcd4;             /* cyan accent for headers */
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   KNOCKOUT SUMMARY SPACING BALANCE (MATCH GROUP STAGE)
+============================================================ */
+.group-block.summary-block {
+  margin-top: 8px;        /* add slight top gap between sections */
+  margin-bottom: 12px;    /* balanced bottom spacing */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 1.5;       /* same rhythm as group stage */
+}
+
+/* Header color and spacing */
+.group-block.summary-block h4 {
+  color: #00bcd4;         /* cyan accent */
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 6px 0 4px;      /* consistent with group stage */
+  text-transform: uppercase;
+}
+
+/* Text flow */
+.group-block.summary-block div {
+  display: inline;
+  margin-right: 10px;
+  color: #f5f5f5;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.inside-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  display: flex;               /* centers the X horizontally & vertically */
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.inside-close-btn:hover {
+  background: #333;
+  border-color: #555;
+  color: #cccccc;
+}
+
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+  .bracket-overlay-content {
+    width: 95vw;
+    height: 80vh;
+    padding: 15px;
+  }
+
+  .round-details {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .group-block {
+    width: 150px;
+  }
+
+  .round {
+    min-width: 150px;
+  }
+}
+
+
+
+/* MOBILE LAYOUT */
+@media (max-width: 600px) {
+
+  /* Global scaling */
+  body {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Group tables */
+  .group-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .group-table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 13px;
+  }
+
+  .group-table th,
+  .group-table td {
+    padding: 6px 4px;
+    text-align: center;
+  }
+
+  /* Match rows */
+  .match-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+
+  .match-teams {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .match-score {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Knockout bracket */
+  .knockout-round {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .knockout-match {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+
+  .knockout-team {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  /* Final / Third place */
+  .final-container,
+  .thirdplace-container {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .final-score,
+  .thirdplace-score {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Buttons */
+  button,
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    margin: 6px 0;
+    border-radius: 6px;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* Team flags / icons */
+  .team-flag {
+    width: 20px;
+    height: 14px;
+  }
+
+  /* Fix overflow */
+  .scroll-x {
+    overflow-x: auto;
+  }
+}
