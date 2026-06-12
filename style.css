@@ -387,12 +387,10 @@ section {
   gap: 6px;
 }
 
-/* ensure separator line is visible in knockout too (keep global style intact) */
 .match-row.s2plus .score-separator .score-line {
   display: inline-block;
 }
 
-/* knockout team dropdown inside grid cell */
 .match-row.s2plus .team-dropdown {
   justify-content: center;
 }
@@ -573,7 +571,7 @@ footer p {
 }
 
 .match-row.s2plus input[type="number"] {
-  width: 45px;    /* narrower so both fit neatly */
+  width: 45px;    
   max-width: 50px;
   background: #000;
   color: #eee;
@@ -595,7 +593,7 @@ footer p {
 }
 
 /* ============================================================
-   DRAWING OF LOTS UI (FINAL, CLEAN, NO UPLOAD)
+   DRAWING OF LOTS
 ============================================================ */
 
 .drawing-lots-box {
@@ -608,12 +606,10 @@ footer p {
   font-size: 14px;
 }
 
-/* Cyan blue highlight */
 .drawing-lots-box strong {
   color: #4ec9ff;
 }
 
-/* Buttons: Draw + Download */
 .btn-draw-lots,
 .btn-download-draw {
   padding: 6px 12px;
@@ -632,7 +628,7 @@ footer p {
   background: #4ec9ff;
   color: #000;
 }
-/* REMOVE the box look completely */
+
 .drawing-lots-result {
   background: none;
   border: none;
@@ -640,7 +636,6 @@ footer p {
   margin: 0;
 }
 
-/* REMOVE the box look completely */
 .drawing-lots-result {
   background: none;
   border: none;
@@ -648,7 +643,6 @@ footer p {
   margin: 0;
 }
 
-/* Title = cyan blue */
 .drawing-lots-result .title {
   color: #4ec9ff;   /* cyan blue */
   font-weight: normal;
@@ -657,7 +651,6 @@ footer p {
   margin: 0 0 4px 0;
 }
 
-/* Group + Winner = white */
 .drawing-lots-result .group {
   color: #ffffff;
   font-weight: normal;
@@ -665,10 +658,10 @@ footer p {
   line-height: 1.4;
   margin: 0;
 }
-/* ============================================================
-   MINIMALIST BRACKET LAYOUT (FINAL CLEAN VERSION)
-============================================================ */
 
+/* ============================================================
+   BRACKET LAYOUT
+============================================================ */
 .bracket-chart {
   background-color: #111;
   border-radius: 8px;
@@ -687,7 +680,6 @@ footer p {
   padding-bottom: 20px;
   box-sizing: border-box;
 }
-
 
 .round {
   display: flex;
@@ -772,7 +764,7 @@ footer p {
 }
 
 /* ============================================================
-   BRACKET OVERLAY MODE (FIXED SIZE + INTERNAL SCROLLBARS)
+   BRACKET OVERLAY
 ============================================================ */
 
 .bracket-overlay {
@@ -1004,7 +996,6 @@ footer p {
   text-transform: uppercase;
 }
 
-/* Make items flow horizontally like a paragraph */
 .group-block.summary-block div {
   display: inline;
   margin-right: 12px;
@@ -1042,7 +1033,6 @@ footer p {
   text-transform: uppercase;
 }
 
-/* Make items flow horizontally like a paragraph */
 .group-block.summary-block div {
   display: inline;
   margin-right: 12px;
@@ -1062,10 +1052,10 @@ footer p {
    GLOBAL H4 SPACING OVERRIDE
 ============================================================ */
 h4 {
-  margin-block-start: 0.4em;  /* reduce top spacing */
-  margin-block-end: 0.4em;    /* reduce bottom spacing */
+  margin-block-start: 0.4em; 
+  margin-block-end: 0.4em;  
   font-weight: 700;
-  color: #00bcd4;             /* cyan accent for headers */
+  color: #00bcd4;         
   text-transform: uppercase;
   line-height: 1.3;
 }
@@ -1074,19 +1064,18 @@ h4 {
    KNOCKOUT SUMMARY SPACING BALANCE (MATCH GROUP STAGE)
 ============================================================ */
 .group-block.summary-block {
-  margin-top: 8px;        /* add slight top gap between sections */
-  margin-bottom: 12px;    /* balanced bottom spacing */
+  margin-top: 8px;       
+  margin-bottom: 12px;   
   padding-top: 2px;
   padding-bottom: 2px;
-  line-height: 1.5;       /* same rhythm as group stage */
+  line-height: 1.5;     
 }
 
-/* Header color and spacing */
 .group-block.summary-block h4 {
-  color: #00bcd4;         /* cyan accent */
+  color: #00bcd4;        
   font-weight: 700;
   font-size: 1.1rem;
-  margin: 6px 0 4px;      /* consistent with group stage */
+  margin: 6px 0 4px;    
   text-transform: uppercase;
 }
 
@@ -1104,7 +1093,7 @@ h4 {
   top: 10px;
   right: 12px;
 
-  display: flex;               /* centers the X horizontally & vertically */
+  display: flex;              
   align-items: center;
   justify-content: center;
 
@@ -1130,13 +1119,8 @@ h4 {
   color: #cccccc;
 }
 
-
-
-
-
-
 /* ============================================================
-   RESPONSIVE
+   MOBILE LAYOUT
 ============================================================ */
 
 @media (max-width: 900px) {
@@ -1158,14 +1142,7 @@ h4 {
   .round {
     min-width: 150px;
   }
-}
 
-
-
-/* MOBILE LAYOUT */
-@media (max-width: 600px) {
-
-  /* Global scaling */
   body {
     padding: 0 10px;
     font-size: 14px;
@@ -1236,7 +1213,6 @@ h4 {
     padding: 4px 0;
   }
 
-  /* Final / Third place */
   .final-container,
   .thirdplace-container {
     width: 100%;
@@ -1253,7 +1229,6 @@ h4 {
     margin: 10px 0;
   }
 
-  /* Buttons */
   button,
   .btn {
     width: 100%;
@@ -1263,7 +1238,6 @@ h4 {
     border-radius: 6px;
   }
 
-  /* Tabs */
   .tabs {
     display: flex;
     flex-direction: column;
@@ -1277,13 +1251,11 @@ h4 {
     font-size: 15px;
   }
 
-  /* Team flags / icons */
   .team-flag {
     width: 20px;
     height: 14px;
   }
 
-  /* Fix overflow */
   .scroll-x {
     overflow-x: auto;
   }
