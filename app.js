@@ -3197,11 +3197,10 @@ function renderBracketChart() {
 
       <div class="bracket-grid">
 
-        <!-- GROUP STAGE -->
+        <!-- GROUP STAGE (NO SUMMARY HERE ANYMORE) -->
         <div class="round" data-round="groupstage">
           <h3 class="round-header">Group Stage</h3>
           ${renderBracketGroups(groupstage, nameMap)}
-          ${renderGroupStageSummaryBracket(wc, engine)}
         </div>
 
         <!-- ROUND OF 32 (ONLY IF EXISTS) -->
@@ -3255,8 +3254,6 @@ function renderBracketChart() {
   }
 }
 
-
-
 /* ============================================================
    CLICK EVENTS FOR ROUND HEADERS
 ============================================================ */
@@ -3270,7 +3267,7 @@ function attachRoundHeaderEvents() {
 }
 
 /* ============================================================
-   SINGLE ROUND VIEW (TAB LOGIC + BRACKET CSS)
+   SINGLE ROUND VIEW
 ============================================================ */
 function renderSingleRound(roundKey) {
   const wc = currentWorldCup;
