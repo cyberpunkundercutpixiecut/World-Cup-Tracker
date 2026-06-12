@@ -3020,8 +3020,6 @@ function loadSeasonRoundJSON() {
   input.click();
 }
 
-
-
 function saveSeasonRoundJSON() {
   if (!currentWorldCup || !currentWorldCup.season) return;
 
@@ -3166,11 +3164,7 @@ function getTeamName(idOrName, nameMap) {
 }
 
 /* ============================================================
-   MAIN BRACKET RENDER (FULL VIEW)
-   >>> TAB LOGIC + BRACKET CSS <<<
-============================================================ */
-/* ============================================================
-   MAIN BRACKET RENDER (FULL VIEW, CLEAN + NO SUMMARY LEAK)
+   MAIN BRACKET RENDER
 ============================================================ */
 function renderBracketChart() {
   const wc = currentWorldCup;
@@ -3191,8 +3185,7 @@ function renderBracketChart() {
 
   bracketChartView.innerHTML = `
     <div class="bracket-chart">
-      <button class="inside-close-btn" id="btnInsideClose">×</button>
-
+      
       <h2>${wc.year} World Cup Bracket Chart</h2>
 
       <div class="bracket-grid">
@@ -3246,12 +3239,6 @@ function renderBracketChart() {
   `;
 
   attachRoundHeaderEvents();
-
-  // Close button inside overlay
-  const btnInsideClose = document.getElementById("btnInsideClose");
-  if (btnInsideClose) {
-    btnInsideClose.addEventListener("click", closeBracketOverlay);
-  }
 }
 
 /* ============================================================
